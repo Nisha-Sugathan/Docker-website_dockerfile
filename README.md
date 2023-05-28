@@ -24,4 +24,6 @@ cp -r 2133_moso_interior/* public_html/
 ls -al public_html/
 ```
 Screenshot of current site files
+
+
 ![site_files](https://github.com/Nisha-Sugathan/Docker-website_dockerfile/assets/134600837/47b0928c-fc86-4ae6-a7a9-5f589c8e5efb)
