@@ -1,6 +1,8 @@
 # Docker-website_dockerfile
 Dockerfile is a script to build docker image . A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Docker can build images automatically by reading the instructions from a Dockerfile
 
+### Description
+This code can help us to host a website in which the httpd configuration file is reading from local machine rather than from container configuration path. So we can easily modify the configuration simply via the file stored in the local machine.
 
 ### Prerequisites
 Need to install docker on your machine
