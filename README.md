@@ -27,3 +27,33 @@ Screenshot of current site files
 
 
 ![site_files](https://github.com/Nisha-Sugathan/Docker-website_dockerfile/assets/134600837/47b0928c-fc86-4ae6-a7a9-5f589c8e5efb)
+
+
+### Create a Docker file in the working directory
+```
+FROM httpd:alpine
+COPY ./httpd.conf /usr/local/apache2/conf/httpd.conf
+COPY ./public_html/ /usr/local/apache2/htdocs/
+CMD ["httpd-foreground"]
+```
+Screenshot of the list of files and directories in the working directory
+
+![wd](https://github.com/Nisha-Sugathan/Docker-website_dockerfile/assets/134600837/fadd74f0-5cb1-46ad-8e7a-663b860000f9)
+
+### Building docker image from Docker file
+```
+docker image build -t mysite:1 .
+```
+### creating container from mysite:1 image
+```
+docker container run --name webserver1 -p 8081:80 -d mysite:1
+```
+
+Screenshot of current image
+
+![dockerfile_container](https://github.com/Nisha-Sugathan/Docker-website_dockerfile/assets/134600837/cf002889-2992-4ded-af11-758b1d43f8d6)
+
+
+### Output test
+```
+http://publicdnsname:8081
